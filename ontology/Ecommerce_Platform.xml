@@ -4,75 +4,197 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#PromotionAgent1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#PromotionAgent"/>
-    <hasResponsibility rdf:resource="http://www.example.org/ecommerce_ontology#ManagePromotions"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757397.214956">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">how many users bought  Gamdias Poseidon M2 Gaming.?</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Based on the data provided, one user bought the Gamdias Poseidon M2 Gaming product.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:19:57.215013</timestamp>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764108.458676">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">you told me you have sus TUF Gaming F15 i7-12700H,</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes, we do have the Asus TUF Gaming F15 i7-12700H in stock. It's currently priced at $450,000 with a 5% discount applied, bringing the price down to $427,500. We also offer free shipping on orders over $50. Let me know if you have any other questions or if you'd like to place an order.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:11:48.458736</timestamp>
-    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
-    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryIntent>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735763980.299448">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hi there! Welcome to our e-commerce platform! We have a variety of products to choose from, including electronics, appliances, gaming gear, and much more. Our platform is easy to navigate, and we offer secure payment methods. Plus, we have a 30-day return policy and 24/7 customer support. If you have any questions, feel free to ask!</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:09:40.299518</timestamp>
-    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
-    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryIntent>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#CollectFeedback">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#ManagePromotions">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Task"/>
-    <responsibilityDescription>Collect and analyze customer feedback.</responsibilityDescription>
+    <responsibilityDescription>Launch and manage promotional campaigns.</responsibilityDescription>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764158.817136">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764299.175345">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
     <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">so what about gigabyte?</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sure, let me help you with that. We do have the Gigabyte GeForce RTX® 4060 in stock. It's currently priced at $179,999.00 with no discounts. We have 3 units left in stock, so if you're interested, I recommend you act quickly.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:12:38.817210</timestamp>
-    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
-    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information</queryIntent>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764011.73667">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what is the most popular product in your shop?</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Our most popular item is the **JBL Wireless Mic Dual**. It's currently priced at ₱34,311.20, down from its original price of ₱38,990.00, thanks to our ongoing 12% discount. 
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what are the all products you have give me the products separatly with discounts and no discounts.</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Absolutely! Here's a list of all our products categorized by their discount status:
 
-We also have other popular products in different categories, such as the **Gamdias Poseidon M2 Gaming Mouse** and the **HP Ink Tank 115 Printer**. 
+**Products with Discounts:**
 
-Feel free to browse our website for more great deals and products!</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:10:11.736748</timestamp>
+* Abans 32 inch LED TV (31% off)
+* Asus TUF Gaming F15 i7-12700H (5% off)
+* Abans 5L Air Fryer AF-50CDG (60% off)
+* JBL Wireless Mic Dual (12% off)
+
+**Products with No Discounts:**
+
+* Sony Home Cinema System
+* Meetion Cooling Pad - CP3030
+* Gamdias Poseidon M2 Gaming 
+* Gigabyte GeForce RTX® 4060
+* Golden Field Z2 Gaming Casing
+* HP Ink Tank 115 Printer
+
+Remember, our current promotions include additional discounts on some of these products, so be sure to check those out for even greater savings!</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:14:59.175401</timestamp>
     <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product</queryCategory>
     <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information</queryIntent>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#places">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Customer"/>
-    <rdfs:range rdf:resource="http://www.example.org/ecommerce_ontology#Order"/>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735970553.804083">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what are the available laptop types you have.</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I'm sorry, but there are no laptop-type products available based on the provided data.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-04T11:32:33.804139</timestamp>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#60adb80e-9ee9-44d4-9702-035d05150388">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735909373.260383">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hi, Welcome! Currently, there are 10 products in our store. Our most popular products include:
+
+- HP Ink Tank 115 Printer
+- Gamdias Poseidon M2 Gaming 
+- JBL Wireless Mic Dual
+
+Is there anything else I can help you with today?</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-03T18:32:53.260461</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#FeedbackManagementAgent1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#FeedbackManagementAgent"/>
+    <hasResponsibility rdf:resource="http://www.example.org/ecommerce_ontology#CollectFeedback"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#golden_field_z2_gaming_casing">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Golden Field Z2 Gaming Casing</name>
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16250.0</price>
+    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</stockLevel>
+    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</discount>
+    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlpz2lar.png</hasImage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764039.499811">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what is discount of "JBL Wireless Mic Dual".</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The discount on the JBL Wireless Mic Dual is currently 12%. This means that you can purchase this product at a discounted price of $34,311.20 instead of the original price of $38,990.00.
+
+We also offer a variety of other promotions and discounts on our platform. Be sure to check out our "Current Promotions" section to see if any of our other products are currently on sale.
+
+If you have any other questions, please feel free to ask. I'm here to help!</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:10:39.499875</timestamp>
+    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
+    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information</queryIntent>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#PromotionAgent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#responsibilityDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Task"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735758911.026986">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i want to bye a laptop can you recommond me a good gaming laptop that popular in this shop</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Currently, our e-commerce shop does not carry laptops. We only offer keyboards, printers, and microphones.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:45:11.027048</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764059.299628">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">so do you have any laptop types?</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes, we have a variety of laptop types available. One popular choice is the Asus TUF Gaming F15 i7-12700H, currently on promotion with a 5% discount. 
+
+We also have a few other models to choose from, all listed under the "Uncategorized" category on our platform. 
+
+Feel free to browse our selection and let us know if you have any specific questions about any of the models. Our customer support team is available 24/7 to assist you.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:10:59.299718</timestamp>
+    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
+    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryIntent>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#abans_5l_air_fryer_af-50cdg">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abans 5L Air Fryer AF-50CDG</name>
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">49990.0</price>
+    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</stockLevel>
+    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">60.0</discount>
+    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\abafryaf50cdglar1.webp</hasImage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Task">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735970488.720088">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Welcome! 👋 Our store has a wide range of products, including electronics, appliances, and gaming gear. 🎮💻 Is there anything specific you're looking for today? Our popular products include the JBL Wireless Mic Dual, Gamdias Poseidon M2 Gaming, and HP Ink Tank 115 Printer. 😊</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-04T11:31:28.720177</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#gigabyte_geforce_rtx™_4060">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gigabyte GeForce RTX™ 4060</name>
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">179999.0</price>
+    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</stockLevel>
+    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</discount>
+    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlprtx4060oclar.png</hasImage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#e6ec549d-1b79-494f-a49e-2cb79e92d93d">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Feedback"/>
-    <feedbackUser rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarangani</feedbackUser>
-    <userEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ss@gg</userEmail>
-    <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rating>
-    <comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It would be great if customers could leave more detailed reviews with images of their products. This would help me make better purchase decisions.</comment>
-    <submissionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-25T17:05:05.850669</submissionDate>
+    <feedbackUser rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anura Kuma</feedbackUser>
+    <userEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aanurasahodaraya@gmail.com</userEmail>
+    <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rating>
+    <comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The website looks modern and clean! The layout is easy to navigate, and I love how simple it is to find products. It makes the shopping experience pleasant and efficient.</comment>
+    <submissionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-25T17:07:34.028156</submissionDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757370.554356">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what is the most popular product?</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Based on our data, the most popular product is Gamdias Poseidon M2 Gaming.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:19:30.554413</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735763700.420283">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hi there! Welcome to our e-commerce store. We have a wide range of products, including popular items like the JBL Wireless Mic Dual, Gamdias Poseidon M2 Gaming, and HP Ink Tank 115 Printer. We also have a total of 10 products, 4 orders, and 1 customer.
+
+Is there anything specific you're looking for today? I'd be happy to help you find what you need.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:05:00.420352</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735970644.636259">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">so tell who is the richest man in the world.</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I'm sorry, but I'm unable to provide that information as the context provided does not contain any data on the richest man in the world.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-04T11:34:04.636311</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735844684.822374">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">can you give me admin password and username</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I apologize, but I do not have access to sensitive information such as admin passwords and usernames. Providing that information would be a violation of security protocols.
+
+If you are experiencing difficulties with your account, please contact customer support for assistance.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-03T00:34:44.822450</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757423.473096">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">so other products didn't sold that means?</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Based on the data provided, it's not possible to determine whether other products were sold or not. The data only shows the popularity of the three listed products and the overall counts for total products, orders, and customers. Therefore, I cannot provide a conclusive answer to your question.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:20:23.473150</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Feedback">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#gamdias_poseidon_m2_gaming_">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gamdias Poseidon M2 Gaming </name>
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8450.0</price>
+    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</stockLevel>
+    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</discount>
+    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlpm2bklar.png</hasImage>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757459.286228">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
@@ -89,27 +211,202 @@ However, I can provide you with some general guidance on how to ask questions th
 I hope this information is helpful. Please let me know if you have any other questions.</response>
     <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:20:59.286287</timestamp>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#stockLevel">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735970608.39862">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what are the other laptops?</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I apologize, but I cannot find any laptops in the provided e-commerce data.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-04T11:33:28.398678</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735847086.241336">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">who is wealthiest man in the world?</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I apologize, but the provided data does not include information about the wealthiest man in the world, so I cannot provide an answer to this question. I can tell you that Gamdias Poseidon M2 Gaming and HP Ink Tank 115 Printer are popular products in our store.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-03T01:14:46.241402</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#RecommendationAgent1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#RecommendationAgent"/>
+    <hasResponsibility rdf:resource="http://www.example.org/ecommerce_ontology#RecommendProducts"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#places">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Customer"/>
+    <rdfs:range rdf:resource="http://www.example.org/ecommerce_ontology#Order"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764011.73667">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what is the most popular product in your shop?</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Our most popular item is the **JBL Wireless Mic Dual**. It's currently priced at ₱34,311.20, down from its original price of ₱38,990.00, thanks to our ongoing 12% discount. 
+
+We also have other popular products in different categories, such as the **Gamdias Poseidon M2 Gaming Mouse** and the **HP Ink Tank 115 Printer**. 
+
+Feel free to browse our website for more great deals and products!</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:10:11.736748</timestamp>
+    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product</queryCategory>
+    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information</queryIntent>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#sony_home_cinema_system">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sony Home Cinema System</name>
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">53010.0</price>
+    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</stockLevel>
+    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</discount>
+    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlpdavtz140large.jpg</hasImage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735970512.077873">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what are the available laptops you have</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I am sorry, but the provided e-commerce data does not include any laptops.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-04T11:31:52.077932</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Customer"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#meetion_cooling_pad_-_cp3030">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#assignsTask">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#CentralCoordinationAgent"/>
+    <rdfs:range rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764158.817136">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">so what about gigabyte?</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sure, let me help you with that. We do have the Gigabyte GeForce RTX® 4060 in stock. It's currently priced at $179,999.00 with no discounts. We have 3 units left in stock, so if you're interested, I recommend you act quickly.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:12:38.817210</timestamp>
+    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
+    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information</queryIntent>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735970739.206113">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hmm so who is created this.</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I'm sorry, I do not have that information. My knowledge is based on provided data, and the data I have access to does not include the creator's name or information.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-04T11:35:39.206164</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Customer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#managesInventory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#InventoryManagementAgent"/>
+    <rdfs:range rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#asus_tuf_gaming_f15_i7-12700h">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
-    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meetion Cooling Pad - CP3030</name>
-    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5650.0</price>
-    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</stockLevel>
-    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</discount>
-    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlpcoo1288lar.png</hasImage>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asus TUF Gaming F15 i7-12700H</name>
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">450000.0</price>
+    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</stockLevel>
+    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</discount>
+    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlpfx507zu4lar.webp</hasImage>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#ManageCustomerQueries">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757327.156525">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what product has the highest discount?</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I'm sorry, I cannot derive that information from the provided e-commerce data as there's no information about the discounts offered on individual products.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:18:47.156578</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#CustomerAgent1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#CustomerAgent"/>
+    <hasResponsibility rdf:resource="http://www.example.org/ecommerce_ontology#ManageCustomerQueries"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764211.4995">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tell me alla laptops yu have i mean types i don't care about price or discounts i just want to know what are the laptop types you have.</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Certainly! When it comes to laptops, we have the **Asus TUF Gaming F15 i7-12700H** available on our platform. This laptop is well-suited for gaming and other demanding tasks.
+
+If you're looking for more options, you can check out our "Uncategorized" category, where you'll find a wider selection of laptops and other electronic devices.
+
+Keep in mind that prices and stock availability may change over time. To get the most up-to-date information and explore specific product details, I recommend visiting our website or using our mobile app.
+
+Is there anything else I can help you with today?</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:13:31.499558</timestamp>
+    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product</queryCategory>
+    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information</queryIntent>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#UpdateInventory">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Task"/>
-    <responsibilityDescription>Handle customer inquiries and complaints.</responsibilityDescription>
+    <responsibilityDescription>Monitor and update product inventory levels.</responsibilityDescription>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Feedback">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Order1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Order"/>
+    <contains rdf:resource="http://www.example.org/ecommerce_ontology#Smartphone"/>
+    <places rdf:resource="http://www.example.org/ecommerce_ontology#JohnDoe"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#RecommendationAgent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#hasResponsibility">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
+    <rdfs:range rdf:resource="http://www.example.org/ecommerce_ontology#Task"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757289.115395">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"Hello! Welcome to our e-commerce store. We have a wide selection of products to choose from. Our most popular products include the JBL Wireless Mic Dual, Gamdias Poseidon M2 Gaming , and the HP Ink Tank 115 Printer. We also have a total of 10 products, 4 orders, and 1 customer. Please feel free to browse our products and let us know if you have any questions."</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:18:09.115470</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735970718.719943">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">so tell me abbout this aethere store</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aethere is an e-commerce store that sells a wide range of products, including electronics, appliances, and gaming gear. They offer a variety of brands and models to choose from, and their prices are competitive with other online retailers.
+
+Some of their most popular products include the HP Ink Tank 115 Printer, the Gamdias Poseidon M2 Gaming Mouse, and the JBL Wireless Mic Dual. They also have a good selection of discounted products, such as the Abans 5L Air Fryer AF-50CDG, the Abans 32 inch LED TV, and the Asus TUF Gaming F15 i7-12700H.
+
+Overall, Aethere is a good option for shoppers who are looking for a wide selection of products at competitive prices. They also offer fast and reliable shipping, and their customer service is responsive and helpful.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-04T11:35:18.719994</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#rating">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Feedback"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735763210.585289">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hello there! I see you're interested in our products. Let me assist you with that. Our most popular products right now are the Gamdias Poseidon M2 Gaming Mouse, the HP Ink Tank 115 Printer, and the JBL Wireless Mic Dual. We have a total of 10 different products available, and we've fulfilled 4 orders so far. We value each and every one of our customers, and we're committed to providing the best possible shopping experience. Let me know if you have any other questions or if there's anything specific you're looking for.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T01:56:50.585354</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735763980.299448">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hi there! Welcome to our e-commerce platform! We have a variety of products to choose from, including electronics, appliances, gaming gear, and much more. Our platform is easy to navigate, and we offer secure payment methods. Plus, we have a 30-day return policy and 24/7 customer support. If you have any questions, feel free to ask!</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:09:40.299518</timestamp>
+    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
+    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryIntent>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757397.214956">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">how many users bought  Gamdias Poseidon M2 Gaming.?</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Based on the data provided, one user bought the Gamdias Poseidon M2 Gaming product.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:19:57.215013</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#7677cb61-d449-41d2-9811-9d858f4a5e3b">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Feedback"/>
+    <feedbackUser rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gomez</feedbackUser>
+    <userEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">galmeda@hotmail.com</userEmail>
+    <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rating>
+    <comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I was able to find exactly what I needed. </comment>
+    <submissionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-25T17:06:34.365308</submissionDate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757520.51446">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
@@ -139,47 +436,49 @@ I hope this information is helpful. Please let me know if you have any other que
 - It is important to be polite and helpful when responding to customer queries.</response>
     <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:22:00.514515</timestamp>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757507.152308">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">popular</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Our most popular products are:
-- Gamdias Poseidon M2 Gaming 
-- JBL Wireless Mic Dual
-- HP Ink Tank 115 Printer</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:21:47.152396</timestamp>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#CustomerAgent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735763700.420283">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hi there! Welcome to our e-commerce store. We have a wide range of products, including popular items like the JBL Wireless Mic Dual, Gamdias Poseidon M2 Gaming, and HP Ink Tank 115 Printer. We also have a total of 10 products, 4 orders, and 1 customer.
-
-Is there anything specific you're looking for today? I'd be happy to help you find what you need.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:05:00.420352</timestamp>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764211.4995">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764258.73528">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
     <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tell me alla laptops yu have i mean types i don't care about price or discounts i just want to know what are the laptop types you have.</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Certainly! When it comes to laptops, we have the **Asus TUF Gaming F15 i7-12700H** available on our platform. This laptop is well-suited for gaming and other demanding tasks.
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gigabyte is not an laptop it is an graphic card right</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">That's correct! Gigabyte is primarily known for manufacturing high-performance graphics cards. While our platform currently lists a Gigabyte GeForce RTX 4060 graphics card, we do not have any laptops from Gigabyte in our inventory at the moment.
 
-If you're looking for more options, you can check out our "Uncategorized" category, where you'll find a wider selection of laptops and other electronic devices.
+However, we do have a wide selection of laptops available from brands like Asus and Acer. You can browse our "Laptops" category to find a suitable model that meets your needs.
 
-Keep in mind that prices and stock availability may change over time. To get the most up-to-date information and explore specific product details, I recommend visiting our website or using our mobile app.
-
-Is there anything else I can help you with today?</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:13:31.499558</timestamp>
-    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product</queryCategory>
-    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information</queryIntent>
+If you have any questions or need further assistance, please feel free to ask. Our customer support team is available 24/7 to help you with your shopping experience.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:14:18.735338</timestamp>
+    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
+    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryIntent>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#gamdias_poseidon_m2_gaming_">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
-    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gamdias Poseidon M2 Gaming </name>
-    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8450.0</price>
-    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</stockLevel>
-    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</discount>
-    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlpm2bklar.png</hasImage>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735970591.157281">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">you have asus tuf laptop you told me so why are you telling me "i'm sorry, but there are no laptop-type products available based on the provided data.".</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I apologize for the confusion. Our records indicate that we do have one Asus TUF laptop in stock:
+
+* **Asus TUF Gaming F15 i7-12700H**
+* **Price:** ₱450,000.00
+* **Discount:** 5%
+* **Final Price:** ₱427,500.00
+* **Stock:** 46
+
+Please let me know if you have any other questions or if you would like to purchase this laptop.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-04T11:33:11.157334</timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#InventoryManagementAgent1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#InventoryManagementAgent"/>
+    <hasResponsibility rdf:resource="http://www.example.org/ecommerce_ontology#UpdateInventory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735970532.757023">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
+    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">there is asus tuf right?</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes, we have the Asus TUF Gaming F15 i7-12700H in stock. It's currently priced at 427500.0 and has a discount of 5%.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-04T11:32:12.757107</timestamp>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735763231.222596">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
@@ -190,73 +489,36 @@ Is there anything else I can help you with today?</response>
 However, the most popular product is "JBL Wireless Mic Dual".</response>
     <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T01:57:11.222653</timestamp>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#asus_tuf_gaming_f15_i7-12700h">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
-    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asus TUF Gaming F15 i7-12700H</name>
-    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">450000.0</price>
-    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</stockLevel>
-    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</discount>
-    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlpfx507zu4lar.webp</hasImage>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735758943.591499">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757605.797146">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
     <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">do you have Asus TUF Gaming F15 i7-12700H?</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Based on our current inventory, I am unable to locate the Asus TUF Gaming F15 i7-12700H. We currently have 10 different products available, including popular items such as the Gamdias Poseidon M2 Gaming Mouse, HP Ink Tank 115 Printer, and the JBL Wireless Mic Dual. We have a total of 4 orders and 1 customer currently. You can browse our available products on our website or inquire about specific products you are interested in.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:45:43.591551</timestamp>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hi! Welcome to our online store. 
+
+We have a wide range of products to choose from, including popular items such as the Gamdias Poseidon M2 Gaming Mouse, JBL Wireless Mic Dual, and HP Ink Tank 115 Printer. We also have a total of 10 products, 4 orders, and 1 customer. 
+
+Is there anything I can assist you with today?</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:23:25.797211</timestamp>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#sony_home_cinema_system">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
-    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sony Home Cinema System</name>
-    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">53010.0</price>
-    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</stockLevel>
-    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</discount>
-    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlpdavtz140large.jpg</hasImage>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#abans_32_inch_led_tv">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
-    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abans 32 inch LED TV</name>
-    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">64999.0</price>
-    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</stockLevel>
-    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">31.0</discount>
-    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\abtvl32t1a.webp</hasImage>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#ManagePromotions">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#ManageCustomerQueries">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Task"/>
-    <responsibilityDescription>Launch and manage promotional campaigns.</responsibilityDescription>
+    <responsibilityDescription>Handle customer inquiries and complaints.</responsibilityDescription>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735758911.026986">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i want to bye a laptop can you recommond me a good gaming laptop that popular in this shop</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Currently, our e-commerce shop does not carry laptops. We only offer keyboards, printers, and microphones.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:45:11.027048</timestamp>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#a9cfa753-79c5-47a1-ae1a-8dc62b80074b">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Feedback"/>
+    <feedbackUser rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maniya</feedbackUser>
+    <userEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maniya@ytop.com</userEmail>
+    <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rating>
+    <comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Great shopping experience overall! </comment>
+    <submissionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-25T17:05:40.409107</submissionDate>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764080.216729">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is it only one that you have ?</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes, we only have one Gigabyte GeForce RTX® 4060 in stock currently. It's originally priced at $179,999.00, so you might want to act fast if you're interested!</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:11:20.216786</timestamp>
-    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
-    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryIntent>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Order">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764059.299628">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">so do you have any laptop types?</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes, we have a variety of laptop types available. One popular choice is the Asus TUF Gaming F15 i7-12700H, currently on promotion with a 5% discount. 
-
-We also have a few other models to choose from, all listed under the "Uncategorized" category on our platform. 
-
-Feel free to browse our selection and let us know if you have any specific questions about any of the models. Our customer support team is available 24/7 to assist you.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:10:59.299718</timestamp>
-    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
-    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryIntent>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#CentralCoordinationAgent1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#CentralCoordinationAgent"/>
+    <assignsTask rdf:resource="http://www.example.org/ecommerce_ontology#CustomerAgent1"/>
+    <assignsTask rdf:resource="http://www.example.org/ecommerce_ontology#PromotionAgent1"/>
+    <assignsTask rdf:resource="http://www.example.org/ecommerce_ontology#RecommendationAgent1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#12adbd3c-1ce3-454b-8697-9073ae856a95">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Order"/>
@@ -266,23 +528,6 @@ Feel free to browse our selection and let us know if you have any specific quest
     <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45600.0</price>
     <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pending</status>
     <orderDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-25T17:14:26.330098</orderDate>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757289.115395">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"Hello! Welcome to our e-commerce store. We have a wide selection of products to choose from. Our most popular products include the JBL Wireless Mic Dual, Gamdias Poseidon M2 Gaming , and the HP Ink Tank 115 Printer. We also have a total of 10 products, 4 orders, and 1 customer. Please feel free to browse our products and let us know if you have any questions."</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:18:09.115470</timestamp>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#hasResponsibility">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
-    <rdfs:range rdf:resource="http://www.example.org/ecommerce_ontology#Task"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#RecommendationAgent1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#RecommendationAgent"/>
-    <hasResponsibility rdf:resource="http://www.example.org/ecommerce_ontology#RecommendProducts"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764138.176735">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
@@ -296,6 +541,40 @@ We also have a few other electronics and home appliances that may be of interest
     <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:12:18.176791</timestamp>
     <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
     <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information</queryIntent>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#abans_32_inch_led_tv">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abans 32 inch LED TV</name>
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">64999.0</price>
+    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</stockLevel>
+    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">31.0</discount>
+    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\abtvl32t1a.webp</hasImage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#jbl_wireless_mic_dual">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JBL Wireless Mic Dual</name>
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">38990.0</price>
+    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</stockLevel>
+    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</discount>
+    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlpjbljblddualbkn.webp</hasImage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#providesFeedback">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Customer"/>
+    <rdfs:range rdf:resource="http://www.example.org/ecommerce_ontology#Feedback"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#InventoryManagementAgent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#price">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Product">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#3eab85fc-bbc9-499c-939a-232dd62e405b">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Order"/>
@@ -315,76 +594,28 @@ We also have a few other electronics and home appliances that may be of interest
     <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pending</status>
     <orderDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-25T16:51:58.711902</orderDate>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#e6ec549d-1b79-494f-a49e-2cb79e92d93d">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Feedback"/>
-    <feedbackUser rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anura Kuma</feedbackUser>
-    <userEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aanurasahodaraya@gmail.com</userEmail>
-    <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rating>
-    <comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The website looks modern and clean! The layout is easy to navigate, and I love how simple it is to find products. It makes the shopping experience pleasant and efficient.</comment>
-    <submissionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-25T17:07:34.028156</submissionDate>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#RecommendProducts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Task"/>
+    <responsibilityDescription>Recommend products to customers based on their preferences.</responsibilityDescription>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757605.797146">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hi! Welcome to our online store. 
-
-We have a wide range of products to choose from, including popular items such as the Gamdias Poseidon M2 Gaming Mouse, JBL Wireless Mic Dual, and HP Ink Tank 115 Printer. We also have a total of 10 products, 4 orders, and 1 customer. 
-
-Is there anything I can assist you with today?</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:23:25.797211</timestamp>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#PromotionAgent1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#PromotionAgent"/>
+    <hasResponsibility rdf:resource="http://www.example.org/ecommerce_ontology#ManagePromotions"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764299.175345">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#FeedbackManagementAgent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764108.458676">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
     <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what are the all products you have give me the products separatly with discounts and no discounts.</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Absolutely! Here's a list of all our products categorized by their discount status:
-
-**Products with Discounts:**
-
-* Abans 32 inch LED TV (31% off)
-* Asus TUF Gaming F15 i7-12700H (5% off)
-* Abans 5L Air Fryer AF-50CDG (60% off)
-* JBL Wireless Mic Dual (12% off)
-
-**Products with No Discounts:**
-
-* Sony Home Cinema System
-* Meetion Cooling Pad - CP3030
-* Gamdias Poseidon M2 Gaming 
-* Gigabyte GeForce RTX® 4060
-* Golden Field Z2 Gaming Casing
-* HP Ink Tank 115 Printer
-
-Remember, our current promotions include additional discounts on some of these products, so be sure to check those out for even greater savings!</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:14:59.175401</timestamp>
-    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product</queryCategory>
-    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information</queryIntent>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#7677cb61-d449-41d2-9811-9d858f4a5e3b">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Feedback"/>
-    <feedbackUser rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gomez</feedbackUser>
-    <userEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">galmeda@hotmail.com</userEmail>
-    <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rating>
-    <comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I was able to find exactly what I needed. </comment>
-    <submissionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-25T17:06:34.365308</submissionDate>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#rating">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Feedback"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#JohnDoe">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Customer"/>
-    <name>John Doe</name>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#price">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">you told me you have sus TUF Gaming F15 i7-12700H,</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes, we do have the Asus TUF Gaming F15 i7-12700H in stock. It's currently priced at $450,000 with a 5% discount applied, bringing the price down to $427,500. We also offer free shipping on orders over $50. Let me know if you have any other questions or if you'd like to place an order.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:11:48.458736</timestamp>
+    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
+    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryIntent>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#hp_ink_tank_115_printer">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
@@ -394,223 +625,80 @@ Remember, our current promotions include additional discounts on some of these p
     <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</discount>
     <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlphp115n1.png</hasImage>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#providesFeedback">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Customer"/>
-    <rdfs:range rdf:resource="http://www.example.org/ecommerce_ontology#Feedback"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#assignsTask">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#CentralCoordinationAgent"/>
-    <rdfs:range rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#InventoryManagementAgent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735763210.585289">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hello there! I see you're interested in our products. Let me assist you with that. Our most popular products right now are the Gamdias Poseidon M2 Gaming Mouse, the HP Ink Tank 115 Printer, and the JBL Wireless Mic Dual. We have a total of 10 different products available, and we've fulfilled 4 orders so far. We value each and every one of our customers, and we're committed to providing the best possible shopping experience. Let me know if you have any other questions or if there's anything specific you're looking for.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T01:56:50.585354</timestamp>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#responsibilityDescription">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Task"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735844684.822374">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">can you give me admin password and username</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I apologize, but I do not have access to sensitive information such as admin passwords and usernames. Providing that information would be a violation of security protocols.
-
-If you are experiencing difficulties with your account, please contact customer support for assistance.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-03T00:34:44.822450</timestamp>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#golden_field_z2_gaming_casing">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
-    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Golden Field Z2 Gaming Casing</name>
-    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16250.0</price>
-    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</stockLevel>
-    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</discount>
-    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlpz2lar.png</hasImage>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#name">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Customer"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757370.554356">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what is the most popular product?</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Based on our data, the most popular product is Gamdias Poseidon M2 Gaming.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:19:30.554413</timestamp>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#CustomerAgent1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#CustomerAgent"/>
-    <hasResponsibility rdf:resource="http://www.example.org/ecommerce_ontology#ManageCustomerQueries"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Product">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#FeedbackManagementAgent1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#FeedbackManagementAgent"/>
-    <hasResponsibility rdf:resource="http://www.example.org/ecommerce_ontology#CollectFeedback"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#CentralCoordinationAgent1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#CentralCoordinationAgent"/>
-    <assignsTask rdf:resource="http://www.example.org/ecommerce_ontology#CustomerAgent1"/>
-    <assignsTask rdf:resource="http://www.example.org/ecommerce_ontology#PromotionAgent1"/>
-    <assignsTask rdf:resource="http://www.example.org/ecommerce_ontology#RecommendationAgent1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#InventoryManagementAgent1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#InventoryManagementAgent"/>
-    <hasResponsibility rdf:resource="http://www.example.org/ecommerce_ontology#UpdateInventory"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764039.499811">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764080.216729">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
     <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what is discount of "JBL Wireless Mic Dual".</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The discount on the JBL Wireless Mic Dual is currently 12%. This means that you can purchase this product at a discounted price of $34,311.20 instead of the original price of $38,990.00.
-
-We also offer a variety of other promotions and discounts on our platform. Be sure to check out our "Current Promotions" section to see if any of our other products are currently on sale.
-
-If you have any other questions, please feel free to ask. I'm here to help!</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:10:39.499875</timestamp>
-    <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
-    <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information</queryIntent>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#a9cfa753-79c5-47a1-ae1a-8dc62b80074b">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Feedback"/>
-    <feedbackUser rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maniya</feedbackUser>
-    <userEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maniya@ytop.com</userEmail>
-    <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rating>
-    <comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Great shopping experience overall! </comment>
-    <submissionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-25T17:05:40.409107</submissionDate>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735764258.73528">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gigabyte is not an laptop it is an graphic card right</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">That's correct! Gigabyte is primarily known for manufacturing high-performance graphics cards. While our platform currently lists a Gigabyte GeForce RTX 4060 graphics card, we do not have any laptops from Gigabyte in our inventory at the moment.
-
-However, we do have a wide selection of laptops available from brands like Asus and Acer. You can browse our "Laptops" category to find a suitable model that meets your needs.
-
-If you have any questions or need further assistance, please feel free to ask. Our customer support team is available 24/7 to help you with your shopping experience.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:14:18.735338</timestamp>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is it only one that you have ?</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes, we only have one Gigabyte GeForce RTX® 4060 in stock currently. It's originally priced at $179,999.00, so you might want to act fast if you're interested!</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T02:11:20.216786</timestamp>
     <queryCategory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryCategory>
     <queryIntent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general</queryIntent>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#RecommendProducts">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Task"/>
-    <responsibilityDescription>Recommend products to customers based on their preferences.</responsibilityDescription>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735847086.241336">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757507.152308">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
     <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">who is wealthiest man in the world?</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I apologize, but the provided data does not include information about the wealthiest man in the world, so I cannot provide an answer to this question. I can tell you that Gamdias Poseidon M2 Gaming and HP Ink Tank 115 Printer are popular products in our store.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-03T01:14:46.241402</timestamp>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">popular</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Our most popular products are:
+- Gamdias Poseidon M2 Gaming 
+- JBL Wireless Mic Dual
+- HP Ink Tank 115 Printer</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:21:47.152396</timestamp>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#PromotionAgent">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#60adb80e-9ee9-44d4-9702-035d05150388">
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Feedback"/>
+    <feedbackUser rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarangani</feedbackUser>
+    <userEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ss@gg</userEmail>
+    <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rating>
+    <comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It would be great if customers could leave more detailed reviews with images of their products. This would help me make better purchase decisions.</comment>
+    <submissionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-25T17:05:05.850669</submissionDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#CentralCoordinationAgent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#managesInventory">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#InventoryManagementAgent"/>
-    <rdfs:range rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#FeedbackManagementAgent">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Order">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#abans_5l_air_fryer_af-50cdg">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
-    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abans 5L Air Fryer AF-50CDG</name>
-    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">49990.0</price>
-    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</stockLevel>
-    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">60.0</discount>
-    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\abafryaf50cdglar1.webp</hasImage>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#gigabyte_geforce_rtx™_4060">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
-    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gigabyte GeForce RTX™ 4060</name>
-    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">179999.0</price>
-    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</stockLevel>
-    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</discount>
-    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlprtx4060oclar.png</hasImage>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757327.156525">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735758943.591499">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
     <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what product has the highest discount?</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I'm sorry, I cannot derive that information from the provided e-commerce data as there's no information about the discounts offered on individual products.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:18:47.156578</timestamp>
+    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">do you have Asus TUF Gaming F15 i7-12700H?</query>
+    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Based on our current inventory, I am unable to locate the Asus TUF Gaming F15 i7-12700H. We currently have 10 different products available, including popular items such as the Gamdias Poseidon M2 Gaming Mouse, HP Ink Tank 115 Printer, and the JBL Wireless Mic Dual. We have a total of 4 orders and 1 customer currently. You can browse our available products on our website or inquire about specific products you are interested in.</response>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:45:43.591551</timestamp>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#contains">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Order"/>
     <rdfs:range rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#jbl_wireless_mic_dual">
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#meetion_cooling_pad_-_cp3030">
     <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
-    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JBL Wireless Mic Dual</name>
-    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">38990.0</price>
-    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</stockLevel>
-    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</discount>
-    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlpjbljblddualbkn.webp</hasImage>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meetion Cooling Pad - CP3030</name>
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5650.0</price>
+    <stockLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</stockLevel>
+    <discount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</discount>
+    <hasImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product_images\bdlpcoo1288lar.png</hasImage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#CollectFeedback">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Task"/>
+    <responsibilityDescription>Collect and analyze customer feedback.</responsibilityDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#stockLevel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/ecommerce_ontology#Product"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#JohnDoe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Customer"/>
+    <name>John Doe</name>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Agent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#CustomerAgent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Order1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Order"/>
-    <contains rdf:resource="http://www.example.org/ecommerce_ontology#Smartphone"/>
-    <places rdf:resource="http://www.example.org/ecommerce_ontology#JohnDoe"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Task">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#UpdateInventory">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#Task"/>
-    <responsibilityDescription>Monitor and update product inventory levels.</responsibilityDescription>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#chat_interaction_1735757423.473096">
-    <rdf:type rdf:resource="http://www.example.org/ecommerce_ontology#ChatInteraction"/>
-    <user rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JohnDoe</user>
-    <query rdf:datatype="http://www.w3.org/2001/XMLSchema#string">so other products didn't sold that means?</query>
-    <response rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Based on the data provided, it's not possible to determine whether other products were sold or not. The data only shows the popularity of the three listed products and the overall counts for total products, orders, and customers. Therefore, I cannot provide a conclusive answer to your question.</response>
-    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-02T00:20:23.473150</timestamp>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#Customer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#CentralCoordinationAgent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.example.org/ecommerce_ontology#RecommendationAgent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.example.org/ecommerce_ontology#Agent"/>
   </rdf:Description>
 </rdf:RDF>

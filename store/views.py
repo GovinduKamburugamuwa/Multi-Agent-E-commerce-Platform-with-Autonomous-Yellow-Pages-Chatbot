@@ -15,6 +15,7 @@ from django.core.paginator import Paginator
 import uuid
 import os
 import json
+import re
 import google.generativeai as genai
 from datetime import datetime
 
@@ -169,83 +170,157 @@ class YellowPagesAgent(BaseOntologyView):
         genai.configure(api_key=settings.GEMINI_API_KEY)
         self.model = genai.GenerativeModel('gemini-pro')
         
-    def get_popular_products(self):
-        products = {}
-        for order in self.graph.subjects(RDF.type, self.ECOM_NS.Order):
-            product = self.graph.value(order, self.ECOM_NS.product)
-            if product:
-                product_name = str(self.graph.value(product, self.ECOM_NS.name))
-                products[product_name] = products.get(product_name, 0) + 1
-        return sorted(products.items(), key=lambda x: x[1], reverse=True)
-    
-    def get_product_recommendations(self, user_preferences):
+    def get_product_info(self, product_name=None):
+        """Get detailed information about a specific product or all products"""
         products = []
         for product in self.graph.subjects(RDF.type, self.ECOM_NS.Product):
             try:
+                name = str(self.graph.value(product, self.ECOM_NS.name))
+                if product_name and name.lower() != product_name.lower():
+                    continue
+                    
                 product_data = {
-                    'name': str(self.graph.value(product, self.ECOM_NS.name)),
+                    'name': name,
                     'price': float(self.graph.value(product, self.ECOM_NS.price)),
                     'stock': int(self.graph.value(product, self.ECOM_NS.stockLevel)),
                     'discount': float(self.graph.value(product, self.ECOM_NS.discount, default=Literal(0.0)))
                 }
+                product_data['final_price'] = round(
+                    product_data['price'] * (1 - product_data['discount']/100), 2
+                )
                 products.append(product_data)
             except Exception as e:
                 print(f"Error processing product {product}: {e}")
                 continue
-
-        prompt = f"""
-        Given these products: {json.dumps(products)}
-        And user preferences: {json.dumps(user_preferences)}
-        Recommend the top 3 products that best match the user's preferences.
-        Explain why each product is recommended.
-        Format your response as JSON with 'recommendations' array containing objects with 
-        'product_name' and 'reason' fields.
-        """
-        
-        try:
-            response = self.model.generate_content(prompt)
-            return json.loads(response.text)
-        except Exception as e:
-            print(f"Error getting AI recommendations: {e}")
-            return {"recommendations": []}
+                
+        return products[0] if product_name and products else products
     
-    def process_customer_query(self, query):
-        context = {
-            "popular_products": self.get_popular_products(),
-            "total_products": len(list(self.graph.subjects(RDF.type, self.ECOM_NS.Product))),
-            "total_orders": len(list(self.graph.subjects(RDF.type, self.ECOM_NS.Order))),
-            "total_customers": len(list(self.graph.subjects(RDF.type, self.ECOM_NS.Customer)))
-        }
-        
-        prompt = f"""
-        Given this e-commerce data: {json.dumps(context)}
-        And this customer query: "{query}"
-        Provide a helpful, natural response based on the data.
-        If specific data isn't available, provide general guidance.
-        """
-        
+    def get_discounted_products(self):
+        """Get all products with active discounts"""
+        products = []
+        for product in self.graph.subjects(RDF.type, self.ECOM_NS.Product):
+            try:
+                discount = float(self.graph.value(product, self.ECOM_NS.discount, default=Literal(0.0)))
+                if discount > 0:
+                    products.append({
+                        'name': str(self.graph.value(product, self.ECOM_NS.name)),
+                        'price': float(self.graph.value(product, self.ECOM_NS.price)),
+                        'discount': discount,
+                        'final_price': float(self.graph.value(product, self.ECOM_NS.price)) * 
+                                     (1 - discount/100)
+                    })
+            except Exception as e:
+                print(f"Error processing product {product}: {e}")
+                continue
+        return sorted(products, key=lambda x: x['discount'], reverse=True)
+    
+    def process_customer_query(self, query, user=None):
+        """Process customer queries with enhanced understanding"""
         try:
+            # Get context data
+            context = {
+                'products': self.get_product_info(),
+                'discounted_products': self.get_discounted_products(),
+                'total_products': len(list(self.graph.subjects(RDF.type, self.ECOM_NS.Product))),
+                'popular_products': self.get_popular_products()
+            }
+            
+            # Clean and normalize the query
+            query = query.lower().strip()
+            
+            # Direct product price query
+            if "price" in query or "cost" in query:
+                product_name = self._extract_product_name(query)
+                if product_name:
+                    product = self.get_product_info(product_name)
+                    if product:
+                        response = f"{product['name']} costs ${product['price']}"
+                        if product['discount'] > 0:
+                            response += f" (${product['final_price']} after {product['discount']}% discount)"
+                        return response
+            
+            # Discount-related queries
+            if "discount" in query or "sale" in query or "offer" in query:
+                if "highest" in query or "best" in query or "maximum" in query:
+                    discounted = self.get_discounted_products()
+                    if discounted:
+                        product = discounted[0]
+                        return (f"The highest discount is on {product['name']} "
+                               f"with {product['discount']}% off, "
+                               f"reducing the price from ${product['price']} to "
+                               f"${product['final_price']}")
+                    return "Currently there are no discounted products."
+            
+            # Stock availability
+            if "stock" in query or "available" in query:
+                product_name = self._extract_product_name(query)
+                if product_name:
+                    product = self.get_product_info(product_name)
+                    if product:
+                        return (f"{product['name']} has {product['stock']} units in stock" 
+                               if product['stock'] > 0 else 
+                               f"Sorry, {product['name']} is currently out of stock")
+            
+            # Use AI for more complex queries
+            prompt = f"""
+            Given this e-commerce data: {json.dumps(context)}
+            And this customer query: "{query}"
+            Provide a helpful, natural response based on the data.
+            Focus only on public product information and avoid sharing sensitive data.
+            If specific data isn't available, provide general guidance.
+            """
+            
             response = self.model.generate_content(prompt)
+            
+            # Log interaction if user is provided
+            if user and not any(sensitive in query.lower() 
+                              for sensitive in ['password', 'email', 'address', 'phone']):
+                self.log_interaction(user, query, response.text)
+                
             return response.text
+            
         except Exception as e:
             print(f"Error processing query: {e}")
             return "I apologize, but I'm having trouble processing your request right now."
     
+    def _extract_product_name(self, query):
+        """Extract product name from query by matching against known products"""
+        products = self.get_product_info()
+        for product in products:
+            if product['name'].lower() in query.lower():
+                return product['name']
+        return None
+    
     def log_interaction(self, user, query, response):
+        """Log customer interactions while respecting privacy"""
+        # Remove any potential sensitive information before logging
+        clean_query = self._sanitize_text(query)
+        clean_response = self._sanitize_text(response)
+        
         interaction_id = str(datetime.now().timestamp())
         interaction_uri = URIRef(self.ECOM_NS + f"chat_interaction_{interaction_id}")
         
         interaction_data = [
             (RDF.type, self.ECOM_NS.ChatInteraction),
             (self.ECOM_NS.user, Literal(user, datatype=XSD.string)),
-            (self.ECOM_NS.query, Literal(query, datatype=XSD.string)),
-            (self.ECOM_NS.response, Literal(response, datatype=XSD.string)),
+            (self.ECOM_NS.query, Literal(clean_query, datatype=XSD.string)),
+            (self.ECOM_NS.response, Literal(clean_response, datatype=XSD.string)),
             (self.ECOM_NS.timestamp, Literal(datetime.now().isoformat(), datatype=XSD.dateTime))
         ]
         
         for predicate, obj in interaction_data:
             self.graph.add((interaction_uri, predicate, obj))
         self.save_graph()
+    
+    def _sanitize_text(self, text):
+        """Remove potentially sensitive information from text"""
+        # Remove email addresses
+        text = re.sub(r'[\w\.-]+@[\w\.-]+\.\w+', '[EMAIL]', text)
+        # Remove phone numbers
+        text = re.sub(r'\b\d{3}[-.]?\d{3}[-.]?\d{4}\b', '[PHONE]', text)
+        # Remove potential credit card numbers
+        text = re.sub(r'\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b', '[CARD]', text)
+        return text
 
 class ChatbotView(LoginRequiredMixin, BaseOntologyView):
     def get(self, request):
@@ -259,10 +334,8 @@ def chat_api(request):
             query = data.get('query')
             user = request.user.username if request.user.is_authenticated else 'Anonymous'
             
-            agent = BaseOntologyView()
-            response = agent.process_customer_query(query)
-            
-            agent.log_interaction(user, query, response)
+            agent = YellowPagesAgent()  # Use the enhanced agent
+            response = agent.process_customer_query(query, user)
             
             return JsonResponse({'response': response})
         except Exception as e:

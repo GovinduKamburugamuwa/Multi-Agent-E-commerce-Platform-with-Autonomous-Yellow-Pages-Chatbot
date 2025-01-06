@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-GEMINI_API_KEY = 'AIzaSyABj_z-PSN6wZgFksnbrg3X0ndhzutOXm8'  # Replace with your actual OpenAI API key
+GEMINI_API_KEY = 'AIzaSyAw4w_LS4Q3nR8dOLIOFRSYBDnVkQ__rp0'  # Replace with your actual OpenAI API key
 WSGI_APPLICATION = 'ecommerce_project.wsgi.application'
 
 
